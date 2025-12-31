@@ -1,16 +1,3 @@
-[![Project Status: Active - The project has reached a stable, usable state and is being actively developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
-[![GitHub](https://img.shields.io/github/license/NVIDIA/physicsnemo)](https://github.com/NVIDIA/physicsnemo/blob/master/LICENSE.txt)
-[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
-[![Install CI](https://github.com/NVIDIA/physicsnemo/actions/workflows/install-ci.yml/badge.svg?event=schedule)](https://github.com/NVIDIA/physicsnemo/actions/workflows/install-ci.yml)
-
-<!-- markdownlint-enable -->
-[**NVIDIA PhysicsNeMo**](#what-is-physicsnemo)
-| [**Documentation**](https://docs.nvidia.com/deeplearning/physicsnemo/physicsnemo-core/index.html)
-| [**Install Guide**](#installation)
-| [**Getting Started**](#getting-started-with-physicsnemo)
-| [**Contributing Guidelines**](#contributing-to-physicsnemo)
-| [**Dev blog**](https://nvidia.github.io/physicsnemo/blog/)
-
 ## Description
 
 This tutorial uses Modulus to study the conjugate heat transfer between the heat sink and the surrounding fluid. The temperature variations inside solid and fluid would be solved in a coupled manner with appropriate interface boundary conditions. In this tutorial, you will learn:
