@@ -5,7 +5,7 @@ This repository demonstrates a Physics-Informed AI/ML framework for thermodynami
 This Physics-Informed AI/ML approach is extensible to modeling and optimization of other electric vehicle components, such as battery thermal management systems, or HVAC subsystems. Unlike traditional methods that provide only scalar outputs (e.g., COP), this framework predicts full-field variables such as temperature, enthalpy, and flow distribution across the component. This allows detailed analysis and design optimization for complex thermal systems in EVs.
 
 As a test case, a Thermostatic Expansion Valve (TXV) is modeled to study heat transfer and fluid dynamics within the refrigeration cycle. Neural networks are trained to predict temperature fields in the fluid domain, enabling rapid evaluation of TXV performance under different operating conditions. Validation datasets are incorporated to ensure accuracy and reliability of the predictions.
-The figure below shows the geometry of TXV.
+The figure below illustrates the geometry of the TXV
 
 ![txv3](https://github.com/user-attachments/assets/087ddbbf-d97f-4fc8-95a1-7708da448bd4)
 
@@ -214,134 +214,6 @@ workflows to suit the diversity of use cases in the science and engineering disc
 > Have questions about how PhysicsNeMo can assist you? Try our [Experimental] chatbot,
 > [PhysicsNeMo Guide](https://chatgpt.com/g/g-PXrBv20SC-modulus-guide), for answers.
 
-### Hello World
-
-You can start using PhysicsNeMo in your PyTorch code as simply as shown here:
-
-```python
->>> import torch
->>> from physicsnemo.models.mlp.fully_connected import FullyConnected
->>> model = FullyConnected(in_features=32, out_features=64)
->>> input = torch.randn(128, 32)
->>> output = model(input)
->>> output.shape
-torch.Size([128, 64])
-```
-
-To use the distributed module, you can do the following (example for
-distributed data parallel training; for a more in-depth tutorial, refer to
-[PhysicsNeMo Distributed](https://docs.nvidia.com/deeplearning/physicsnemo/physicsnemo-core/api/physicsnemo.distributed.html#)):
-
-```python
-import torch
-from torch.nn.parallel import DistributedDataParallel
-from physicsnemo.distributed import DistributedManager
-from physicsnemo.models.mlp.fully_connected import FullyConnected
-
-def main():
-    DistributedManager.initialize()
-    dist = DistributedManager()
-
-    arch = FullyConnected(in_features=32, out_features=64).to(dist.device)
-
-    if dist.distributed:
-        ddps = torch.cuda.Stream()
-        with torch.cuda.stream(ddps):
-            arch = DistributedDataParallel(
-                arch,
-                device_ids=[dist.local_rank],
-                output_device=dist.device,
-                broadcast_buffers=dist.broadcast_buffers,
-                find_unused_parameters=dist.find_unused_parameters,
-            )
-        torch.cuda.current_stream().wait_stream(ddps)
-
-    # Set up the optimizer
-    optimizer = torch.optim.Adam(
-        arch.parameters(),
-        lr=0.001,
-    )
-
-    def training_step(invar, target):
-        pred = arch(invar)
-        loss = torch.sum(torch.pow(pred - target, 2))
-        loss.backward()
-        optimizer.step()
-        return loss
-
-    # Sample training loop
-    for i in range(20):
-        # Random inputs and targets for simplicity
-        input = torch.randn(128, 32, device=dist.device)
-        target = torch.randn(128, 64, device=dist.device)
-
-        # Training step
-        loss = training_step(input, target)
-
-if __name__ == "__main__":
-    main()
-```
-
-To use the PDE module, you can do the following:
-
-```python
->>> from physicsnemo.sym.eq.pdes.navier_stokes import NavierStokes
->>> ns = NavierStokes(nu=0.01, rho=1, dim=2)
->>> ns.pprint()
-continuity: u__x + v__y
-momentum_x: u*u__x + v*u__y + p__x + u__t - 0.01*u__x__x - 0.01*u__y__y
-momentum_y: u*v__x + v*v__y + p__y + v__t - 0.01*v__x__x - 0.01*v__y__y
-```
-
-## Who is Using and Contributing to PhysicsNeMo
-
-PhysicsNeMo is an open-source project and gets contributions from researchers in
-the SciML and AI4Science fields. While the PhysicsNeMo team works on optimizing the
-underlying software stack, the community collaborates and contributes model architectures,
-datasets, and reference applications so we can innovate in the pursuit of
-developing generalizable model architectures and algorithms.
-
-Some recent examples of community contributors are the [HP Labs 3D Printing team](https://developer.nvidia.com/blog/spotlight-hp-3d-printing-and-nvidia-physicsnemo-collaborate-on-open-source-manufacturing-digital-twin/),
-[Stanford Cardiovascular research team](https://developer.nvidia.com/blog/enabling-greater-patient-specific-cardiovascular-care-with-ai-surrogates/),
-[UIUC team](https://github.com/NVIDIA/physicsnemo/tree/main/examples/cfd/mhd_pino),
-[CMU team](https://github.com/NVIDIA/physicsnemo/tree/main/examples/generative/diffusion),
-etc.
-
-Recent examples of research teams using PhysicsNeMo are the
-[ORNL team](https://arxiv.org/abs/2404.05768),
-[TU Munich CFD team](https://www.nvidia.com/en-us/on-demand/session/gtc24-s62237/), etc.
-
-Please navigate to this page for a complete list of research work leveraging PhysicsNeMo.
-For a list of enterprises using PhysicsNeMo, refer to the [PhysicsNeMo Webpage](https://developer.nvidia.com/physicsnemo).
-
-Using PhysicsNeMo and interested in showcasing your work on
-[NVIDIA Blogs](https://developer.nvidia.com/blog/category/simulation-modeling-design/)?
-Fill out this [proposal form](https://forms.gle/XsBdWp3ji67yZAUF7) and we will get back
-to you!
-
-## Why Are They Using PhysicsNeMo
-
-Here are some of the key benefits of PhysicsNeMo for SciML model development:
-
-<!-- markdownlint-disable -->
-<img src="docs/img/value_prop/benchmarking.svg" width="100"> | <img src="docs/img/value_prop/recipe.svg" width="100"> | <img src="docs/img/value_prop/performance.svg" width="100">
----|---|---|
-|SciML Benchmarking and Validation|Ease of Using Generalized SciML Recipes with Heterogeneous Datasets |Out-of-the-Box Performance and Scalability
-|PhysicsNeMo enables researchers to benchmark their AI models against proven architectures for standard benchmark problems with detailed domain-specific validation criteria.|PhysicsNeMo enables researchers to pick from state-of-the-art SciML architectures and use built-in data pipelines for their use case.| PhysicsNeMo provides out-of-the-box performant training pipelines, including optimized ETL pipelines for heterogeneous engineering and scientific datasets and out-of-the-box scaling across multi-GPU and multi-node GPUs.
-<!-- markdownlint-enable -->
-
-See what your peer SciML researchers are saying about PhysicsNeMo (coming soon).
-
-## Getting Started with PhysicsNeMo
-
-The following resources will help you learn how to use PhysicsNeMo. The best
-way is to start with a reference sample and then update it for your own use case.
-
-- [Using PhysicsNeMo with your PyTorch model](https://docs.nvidia.com/deeplearning/physicsnemo/physicsnemo-core/tutorials/simple_training_example.html#using-custom-models-in-physicsnemo)
-- [Using PhysicsNeMo built-in models](https://docs.nvidia.com/deeplearning/physicsnemo/physicsnemo-core/tutorials/simple_training_example.html#using-built-in-models)
-- [Getting Started Guide](https://docs.nvidia.com/deeplearning/physicsnemo/getting-started/index.html)
-- [Reference Samples](https://github.com/NVIDIA/physicsnemo/blob/main/examples/README.md)
-- [User Guide Documentation](https://docs.nvidia.com/deeplearning/physicsnemo/physicsnemo-core/index.html)
 
 ## Learning AI Physics
 
