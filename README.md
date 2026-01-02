@@ -30,22 +30,22 @@ For detailed information, please refer to the [CFD](CFD) and [AI/ML](AI-ML) fold
 
 - Decision Support: Enables OEM-level design and optimization of heat pump.
 
-## Test Case: Thermostatic Expansion Valve (TXV)
+## Test Case: Condenser 
 
-The TXV regulates refrigerant flow in the heat pump cycle of an electric vehicle. Accurate modeling is critical for evaluating the system’s thermal performance. In this project:
+The condenser regulates refrigerant flow in the heat pump cycle of an electric vehicle. Accurate modeling is critical for evaluating the system’s thermal performance. In this project:
 
-- The TXV geometry and flow domain are defined based on AC and Refrigeration.
+- The condenser geometry and flow domain are defined based on AC and Refrigeration.
 
 - Physics-informed neural networks are trained to predict temperatures and enthalpy in the fluid domain.
 
 - Validation datasets are generated to compare AI/ML predictions against conventional simulation results (ANSYS FLUENT).
 
-This approach allows high-fidelity simulation of the TXV without requiring full computational fluid dynamics (CFD) runs for every operating point. 
+This approach allows high-fidelity simulation of the condenser without requiring full computational fluid dynamics (CFD) runs for every operating point. 
 
 
 ## Simulation Workflow
 
-1- Geometry Setup: The TXV and surrounding fluid domain are defined.
+1- Geometry Setup: The condenser and surrounding fluid domain are defined.
 
 2- Physics-Based Modeling: Governing equations for mass, momentum, and energy are implemented to capture thermodynamic behavior.
 
