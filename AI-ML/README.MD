@@ -1,10 +1,10 @@
 1. Geometry Definition
 
-This first block of code defines the geometry of the coil. It uses the sympy library to create 2D shapes for the fluid and solid domains and then extrudes them into 3D.
+This first block of code defines the geometry of the Condenser. It uses the sympy library to create 2D shapes for the fluid and solid domains and then extrudes them into 3D.
 
-GEOMETRY_PARAMS: A dictionary holding all the key dimensions of the coil structure.
+GEOMETRY_PARAMS: A dictionary holding all the key dimensions of the Cndesner structure.
 
-CustomCoil class:
+CustomCondenser class:
 
 The __init__ method constructs the 2D cross-section by combining and subtracting basic shapes (Polygon, Circle).
 
@@ -14,12 +14,12 @@ It then creates the surrounding solid pipe structure (solid_geometry_2d) by buff
 
 Finally, it uses the Extrude utility to give depth to the 2D shapes, creating the 3D geometries (fluid_geo, solid_geo) required for the simulation. It also explicitly defines the 3D surfaces for the inlet, outlet, the fluid-solid interface, and the outer walls.
 
-I have defined the geometry as you asked. As the next step, this second block of code defines the governing physics and the neural networks.
+It will be defined the geometry as you asked. As the next step, this second block of code defines the governing physics and the neural networks.
 
 2. Neural Networks & PDEs
 This section establishes the physical laws and the neural network architecture for the simulation.
 
-Physical Properties: Constants for the material properties of the fluid (water) and the solid (aluminum) are defined. These include kinematic viscosity (nu_f), thermal diffusivity (D_f, D_s), and thermal conductivity (k_f, k_s).
+Physical Properties: Constants for the material properties of the fluid and the solid are defined. These include kinematic viscosity (nu_f), thermal diffusivity (D_f, D_s), and thermal conductivity (k_f, k_s).
 
 PDEs: The governing partial differential equations are instantiated.
 
@@ -42,7 +42,7 @@ Here is the third and final part of the code. This block brings the geometry and
 3. Simulation and Constraints
 This final script sets up the simulation domain, applies all physical constraints (boundary conditions), and runs the solver.
 
-Domain Creation: An empty Domain is created, and the CustomCoil geometry is instantiated.
+Domain Creation: An empty Domain is created, and the Custom geometry is instantiated.
 
 Boundary Conditions (PointwiseBoundaryConstraint):
 
