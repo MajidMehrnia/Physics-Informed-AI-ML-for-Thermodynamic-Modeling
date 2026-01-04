@@ -10,7 +10,7 @@ As a test case, a condenser was modeled to study heat transfer and fluid dynamic
 The figure below illustrates the geometry of the condenser.
 
 ![photo_2026-01-04_15-32-16](https://github.com/user-attachments/assets/b66479d1-d553-49ab-9f70-dc6b53057803)
- **Side view of the Condensor generated using Python*
+                                                                          *Side view of the Condenser generated using Python*
 <p align="center">
  <img width="617" height="169" alt="Figure_1" src="https://github.com/user-attachments/assets/3b7211a5-69f2-46e5-980b-68c1bc0beae4" />
 
