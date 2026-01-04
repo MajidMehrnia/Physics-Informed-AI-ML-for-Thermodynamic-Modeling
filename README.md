@@ -27,7 +27,7 @@ This approach allows high-fidelity simulation of the condenser without requiring
 The figures below compare the Physics-Informed AI/ML predictions with reference CFD (ANSYS FLUENT) results for validation.  
 
 <p align="center">
-  <img width="527" height="527" alt="foundational-simulink (2)" src="https://github.com/user-attachments/assets/f28ea269-c401-4d8c-a7d1-7be40689d913" />
+  <img width="327" height="327" alt="foundational-simulink (2)" src="https://github.com/user-attachments/assets/f28ea269-c401-4d8c-a7d1-7be40689d913" />
   <img width="357" height="357" alt="foundational-simulink (2)" src="https://github.com/user-attachments/assets/22437451-0bbb-413b-968a-f39a7b4b6b5d" />
 <a>
 
