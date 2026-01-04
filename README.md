@@ -13,7 +13,7 @@ The figure below illustrates the geometry of the condenser.
 The figure below compares the AI/ML predictions with reference CFD results for validation. The condenser model and the Physics-Informed AI/ML predictions were validated against reference CFD simulations. 
 
 <p align="center">
-  <img width="287" height="287" alt="foundational-simulink (2)" src="https://github.com/user-attachments/assets/e7d66994-5fc3-4117-bc0d-347fdaac84f4" />
+  <img width="327" height="327" alt="foundational-simulink (2)" src="https://github.com/user-attachments/assets/e7d66994-5fc3-4117-bc0d-347fdaac84f4" />
 
 
 
