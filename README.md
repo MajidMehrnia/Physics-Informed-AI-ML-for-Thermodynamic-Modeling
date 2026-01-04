@@ -7,6 +7,7 @@ This Physics-Informed AI/ML approach is extensible to modeling and optimization 
 As a test case, a condenser was modeled to study heat transfer and fluid dynamics within the refrigeration cycle. Neural networks are trained to predict temperature fields in the fluid domain, enabling rapid evaluation of condenser performance under different operating conditions. Validation datasets are incorporated to ensure accuracy and reliability of the predictions.
 The figure below illustrates the geometry of the condenser.
 
+![photo_2026-01-04_15-32-16](https://github.com/user-attachments/assets/96f0ed91-f693-4a89-ae74-9a4b090b4d55)
 
 ### Main output
 
