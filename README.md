@@ -10,8 +10,8 @@ As a test case, a condenser was modeled to study heat transfer and fluid dynamic
 The figure below illustrates the geometry of the condenser.
 
 ![photo_2026-01-04_15-32-16](https://github.com/user-attachments/assets/b66479d1-d553-49ab-9f70-dc6b53057803)
-<img width="712" height="400" alt="Figure_1" src="https://github.com/user-attachments/assets/83862aa7-0393-4091-b518-b1d45893c80b" />
-
+<p align="center">
+ <img width="712" height="400" alt="Figure_1" src="https://github.com/user-attachments/assets/83862aa7-0393-4091-b518-b1d45893c80b" />
 
 In the heat pump cycle of an EV, the condenser releases heat to the surroundings and converts the refrigerant from vapor to liquid. Accurate modeling is critical for evaluating the system’s thermal performance. In this project:
 
@@ -29,8 +29,8 @@ This approach allows high-fidelity simulation of the condenser without requiring
 The figures below compare the Physics-Informed AI/ML predictions with reference CFD (ANSYS FLUENT) results for validation.  
 
 <p align="center">
-  <img width="527" height="527" alt="foundational-simulink (2)" src="https://github.com/user-attachments/assets/f28ea269-c401-4d8c-a7d1-7be40689d913" />
-  <img width="357" height="357" alt="foundational-simulink (2)" src="https://github.com/user-attachments/assets/22437451-0bbb-413b-968a-f39a7b4b6b5d" />
+  <img width="427" height="427" alt="foundational-simulink (2)" src="https://github.com/user-attachments/assets/f28ea269-c401-4d8c-a7d1-7be40689d913" />
+  <img width="307" height="307" alt="foundational-simulink (2)" src="https://github.com/user-attachments/assets/22437451-0bbb-413b-968a-f39a7b4b6b5d" />
 <a>
 
 
