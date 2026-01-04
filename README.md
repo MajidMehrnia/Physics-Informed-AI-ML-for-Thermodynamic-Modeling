@@ -4,10 +4,22 @@ This repository demonstrates a Physics-Informed AI/ML framework for thermodynami
 
 This Physics-Informed AI/ML approach is extensible to modeling and optimization of other electric vehicle components, such as battery thermal management systems, or HVAC subsystems. Unlike traditional methods that provide only scalar outputs (e.g., COP), this framework predicts full-field variables such as temperature, enthalpy, and flow distribution across the component. This allows detailed analysis and design optimization for complex thermal systems in EVs.
 
+## Test Case: Condenser 
+
 As a test case, a condenser was modeled to study heat transfer and fluid dynamics within the refrigeration cycle. Neural networks are trained to predict temperature fields in the fluid domain, enabling rapid evaluation of condenser performance under different operating conditions. Validation datasets are incorporated to ensure accuracy and reliability of the predictions.
 The figure below illustrates the geometry of the condenser.
 
 ![photo_2026-01-04_15-32-16](https://github.com/user-attachments/assets/b66479d1-d553-49ab-9f70-dc6b53057803)
+
+In the heat pump cycle of an EV, the condenser releases heat to the surroundings and converts the refrigerant from vapor to liquid. Accurate modeling is critical for evaluating the system’s thermal performance. In this project:
+
+- The condenser geometry and flow domain are defined based on AC and Refrigeration.
+
+- Physics-informed neural networks are trained to predict temperatures and enthalpy in the fluid domain.
+
+- Validation datasets are generated to compare AI/ML predictions against conventional simulation results (ANSYS FLUENT).
+
+This approach allows high-fidelity simulation of the condenser without requiring full computational fluid dynamics (CFD) runs for every operating point. 
 
 
 ### Main output
@@ -35,18 +47,6 @@ For detailed information, please refer to the [CFD](CFD) and [AI/ML](AI-ML) fold
 - Scalable: The trained models can be applied to different operating conditions and integrated into larger EV thermal management studies.
 
 - Decision Support: Enables OEM-level design and optimization of heat pump.
-
-## Test Case: Condenser 
-
-The condenser regulates refrigerant flow in the heat pump cycle of an electric vehicle. Accurate modeling is critical for evaluating the system’s thermal performance. In this project:
-
-- The condenser geometry and flow domain are defined based on AC and Refrigeration.
-
-- Physics-informed neural networks are trained to predict temperatures and enthalpy in the fluid domain.
-
-- Validation datasets are generated to compare AI/ML predictions against conventional simulation results (ANSYS FLUENT).
-
-This approach allows high-fidelity simulation of the condenser without requiring full computational fluid dynamics (CFD) runs for every operating point. 
 
 
 ## Simulation Workflow
