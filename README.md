@@ -11,6 +11,9 @@ The figure below illustrates the geometry of the condenser.
 
 ![photo_2026-01-04_15-32-16](https://github.com/user-attachments/assets/b66479d1-d553-49ab-9f70-dc6b53057803)
 
+<img width="1282" height="500" alt="Figure_1" src="https://github.com/user-attachments/assets/83862aa7-0393-4091-b518-b1d45893c80b" />
+
+
 In the heat pump cycle of an EV, the condenser releases heat to the surroundings and converts the refrigerant from vapor to liquid. Accurate modeling is critical for evaluating the system’s thermal performance. In this project:
 
 - The condenser geometry and flow domain are defined based on AC and Refrigeration.
