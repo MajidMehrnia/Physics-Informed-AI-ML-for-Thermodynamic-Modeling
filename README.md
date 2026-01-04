@@ -16,10 +16,8 @@ The figures below compare the AI/ML predictions with reference CFD results for v
 
 <p align="center">
   <img width="327" height="327" alt="foundational-simulink (2)" src="https://github.com/user-attachments/assets/e7d66994-5fc3-4117-bc0d-347fdaac84f4" />
-
-<p align="center">
   <img width="627" height="627" alt="foundational-simulink (2)" src="https://github.com/user-attachments/assets/f28ea269-c401-4d8c-a7d1-7be40689d913" />
-
+<a>
 
 The models show strong agreement on key thermal predictions, as both the CFD and the AI/ML model accurately capture the same outlet and minimum temperatures. While the visualization of vortex dynamics differs, the models are not contradictory. The primary distinction lies in how they represent the flow: the CFD shows complex, unsteady vortex shedding, while the AI model depicts a simplified, stable vortex, effectively showing a time-averaged result. 
 
