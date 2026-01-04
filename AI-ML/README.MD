@@ -2,6 +2,8 @@
 
 This first block of code defines the geometry of the Condenser. It uses the sympy library to create 2D shapes for the fluid and solid domains and then extrudes them into 3D.
 
+![photo_2026-01-04_17-50-27](https://github.com/user-attachments/assets/f7103891-672a-482e-b59f-64196cfda216)
+
 GEOMETRY_PARAMS: A dictionary holding all the key dimensions of the Cndesner structure.
 
 CustomCondenser class:
