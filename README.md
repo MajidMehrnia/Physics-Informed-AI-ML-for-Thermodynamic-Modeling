@@ -12,7 +12,7 @@ The figure below illustrates the geometry of the condenser.
 ![photo_2026-01-04_15-32-16](https://github.com/user-attachments/assets/b66479d1-d553-49ab-9f70-dc6b53057803)
                                                                           *Side view of the Condenser generated using Python:*
 <p align="center">
- <img width="617" height="169" alt="Figure_1" src="https://github.com/user-attachments/assets/3b7211a5-69f2-46e5-980b-68c1bc0beae4" />
+<img width="782" height="269" alt="Figure_1" src="https://github.com/user-attachments/assets/c333e6a1-bb89-44ed-9cff-fc66736e6b76" />
 
 
 In the heat pump cycle of an EV, the condenser releases heat to the surroundings and converts the refrigerant from vapor to liquid. Accurate modeling is critical for evaluating the system’s thermal performance. In this project:
