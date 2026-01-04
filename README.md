@@ -12,6 +12,7 @@ The figure below illustrates the geometry of the condenser.
 
 The figure below compares the AI/ML predictions with reference CFD results for validation. The condenser model and the Physics-Informed AI/ML predictions were validated against reference CFD simulations. 
 
+![Condenser1fin-5-200](https://github.com/user-attachments/assets/e7d66994-5fc3-4117-bc0d-347fdaac84f4)
 
 
 The models show strong agreement on key thermal predictions, as both the CFD and the AI/ML model accurately capture the same outlet and minimum temperatures. While the visualization of vortex dynamics differs, the models are not contradictory. The primary distinction lies in how they represent the flow: the CFD shows complex, unsteady vortex shedding, while the AI model depicts a simplified, stable vortex, effectively showing a time-averaged result. 
