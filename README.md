@@ -37,7 +37,7 @@ The figures below compare the Physics-Informed AI/ML predictions with reference 
 
 
 
-The models show strong agreement on key thermal predictions, as both the CFD and the AI/ML model accurately capture the same outlet and minimum temperatures. While the visualization of vortex dynamics differs, the models are not contradictory. The primary distinction lies in how they represent the flow: the CFD shows complex, unsteady vortex shedding, while the AI model depicts a simplified, stable vortex, effectively showing a time-averaged result. 
+The models show strong agreement on key thermal predictions, as both the CFD and the AI/ML model accurately capture the same outlet and maximum temperatures. While the visualization of vortex dynamics differs, the models are not contradictory. The primary distinction lies in how they represent the flow: the CFD shows complex, unsteady vortex shedding, while the AI model depicts a simplified, stable vortex, effectively showing a time-averaged result. 
 
 For detailed information, please refer to the [CFD](CFD) and [AI/ML](AI-ML) folders of this project.
 
