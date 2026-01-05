@@ -31,9 +31,10 @@ This approach allows high-fidelity simulation of the condenser without requiring
 The figures below compare the Physics-Informed AI/ML predictions with reference CFD (ANSYS FLUENT) results for validation.  
 
 <p align="center">
-  <img width="477" height="487" alt="AI-CFD(1)" src="https://github.com/user-attachments/assets/f28ea269-c401-4d8c-a7d1-7be40689d913" />
+  <img width="477" height="487" alt="AI-CFD(1)" src="https://github.com/user-attachments/assets/07a65180-aa12-4f8c-b52f-1f1f56d1c330" />
   <img width="307" height="307" alt="AI-CFD(2)" src="https://github.com/user-attachments/assets/4f5f5d14-ee22-48d6-a07d-40b7bb985974" />
 <a>
+
 
 
 The models show strong agreement on key thermal predictions, as both the CFD and the AI/ML model accurately capture the same outlet and minimum temperatures. While the visualization of vortex dynamics differs, the models are not contradictory. The primary distinction lies in how they represent the flow: the CFD shows complex, unsteady vortex shedding, while the AI model depicts a simplified, stable vortex, effectively showing a time-averaged result. 
