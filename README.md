@@ -32,7 +32,7 @@ The figures below compare the Physics-Informed AI/ML predictions with reference 
 
 <p align="center">
   <img width="477" height="487" alt="AI-CFD(1)" src="https://github.com/user-attachments/assets/07a65180-aa12-4f8c-b52f-1f1f56d1c330" />
-  <img width="307" height="307" alt="AI-CFD(2)" src="https://github.com/user-attachments/assets/4f5f5d14-ee22-48d6-a07d-40b7bb985974" />
+  <img width="307" height="307" alt="AI-CFD(2)" src="https://github.com/user-attachments/assets/47c995d9-e0b9-4a8c-afc0-f158b896a643" />
 <a>
 
 
