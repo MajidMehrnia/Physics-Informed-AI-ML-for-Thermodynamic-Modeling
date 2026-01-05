@@ -19,9 +19,9 @@ In the heat pump cycle of an EV, the condenser releases heat to the surroundings
 
 - The condenser geometry and flow domain are defined based on a secondary fluid A/C and refrigeration system.
 
-- Physics-informed neural networks are trained to predict temperatures and enthalpy in the fluid domain.
+- Physics-informed neural networks are trained to predict temperatures and enthalpy in the fluid domain, are provided in [AI/ML](AI-ML) folder of this repository.
 
-- Validation datasets are generated to compare AI/ML predictions against conventional simulation results (ANSYS FLUENT).
+- Validation datasets are generated to compare AI/ML predictions against conventional simulation results (ANSYS FLUENT), available in [CFD](CFD) folder of this repository.
 
 This approach allows high-fidelity simulation of the condenser without requiring full computational fluid dynamics (CFD) runs for every operating point. 
 
